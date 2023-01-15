@@ -40,35 +40,48 @@
                     <p>Web developers deal with different kinds of websites, including e-commerce, gaming, and news sites. These different website types have certain requirements. For instance, a gaming website must deftly handle advanced graphics. Ecommerce sites, on the other hand, would require the integration of a payment-processing feature and the capacity to deal with stock coming in and out. A web developer decides a site’s applications and designs accordingly.</p>
                     
                     <div class="tab-titles">
-                        <p class="tab-links active-link">Skills</p>
-                        <p class="tab-links">Experience</p>
-                        <p class="tab-links">Education </p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education </p>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li><span>Web developer</span><br>Creating web application</li>
                             <li><span>DevOps</span><br>Love to automating application</li>
-                            <li><span>Tecnical writing</span><br>Love to create technical content</li>
+                            <li><span>Javascript Frameworks</span><br>Know Nodejs,Reactjs and ExpressJS</li>
                         </ul>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>Web developer</span><br>Creating web application</li>
-                            <li><span>DevOps</span><br>Love to automating application</li>
-                            <li><span>Tecnical writing</span><br>Love to create technical content</li>
+                            <li><span>Open source</span><br>Contributed to open source</li>
+                            <li><span>technical Writer</span><br>Love to create technical content</li>
                         </ul>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>Web developer</span>Creating web application</li>
-                            <li><span>DevOps</span>Love to automating application</li>
-                            <li><span>Tecnical writing</span>Love to create technical content</li>
+                            <li><span>2020-2024</span><br>bachelor of technology</li>
+                            <li><span>2019</span><br>completed my high school</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
     
 </body>
 </html>
