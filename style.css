@@ -166,5 +166,5 @@ nav ul li a:hover::after{
 }
 .services-list div:hover{
     background: #03989e;
-    transform: translate(-10px);
+    transform: translate(-5px);
 }
