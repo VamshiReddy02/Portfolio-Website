@@ -161,10 +161,10 @@ nav ul li a:hover::after{
     text-decoration: none;
     color: #fff;
     font-size: 12px;
-    margin-top: 20px;
+    margin-top: 30px;
     display: inline-block;
 }
 .services-list div:hover{
     background: #03989e;
-    transform: translate(-5px);
+    transform: translate(-10px);
 }
